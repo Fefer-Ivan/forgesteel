@@ -3,8 +3,8 @@
 	"private": true,
 	"version": "9.16.0",
 	"type": "module",
-	"repository": "https://github.com/andyaiken/forgesteel.git",
-	"homepage": "https://andyaiken.github.io/forgesteel/",
+	"repository": "https://github.com/Fefer-Ivan/forgesteel.git",
+	"homepage": "https://Fefer-Ivan.github.io/forgesteel/",
 	"scripts": {
 		"start": "vite --host",
 		"update": "npx npm-check-updates --interactive --format group",
