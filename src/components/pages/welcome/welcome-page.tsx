@@ -169,10 +169,7 @@ export const WelcomePage = (props: Props) => {
 					<AppHeader showDirectory={props.showDirectory} showAbout={props.showAbout} showRoll={props.showRoll} showRules={props.showRules} />
 					<div className='welcome-page-content'>
 						<div className='welcome-column'>
-							<HeaderText level={1}>MY PERSONAL FORGE STEEL STAGING AREA PLEASE DON'T USE WILL BE TAKEN OFFLINE</HeaderText>
-							<div className='ds-text'>
-								Use original version here: <a href='https://andyaiken.github.io/forgesteel/' target='_blank' rel='noreferrer'>https://andyaiken.github.io/forgesteel/</a>
-							</div>
+							<HeaderText level={1}>MY PERSONAL FORGE STEEL STAGING AREA; PLEASE DON'T USE; WILL BE TAKEN OFFLINE</HeaderText>
 							<Flex justify='center' style={{ margin: '15px 0 10px 0' }}>
 								<Segmented
 									options={[
