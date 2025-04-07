@@ -1,0 +1,14 @@
+.monster-edit-panel {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.category-selector {
+		height: 46px;
+		white-space: normal;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 18px;
+	}
+}

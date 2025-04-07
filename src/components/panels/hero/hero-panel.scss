@@ -1,0 +1,225 @@
+.hero-panel {
+	&.compact {
+		margin-top: -10px;
+		padding: 0 20px 20px 20px;
+		padding: unset;
+	}
+
+	&.small {
+		.hero-main-section {
+			.hero-main-column {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.page-button-title {
+		font-size: 12px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.hero-main-section {
+		padding: 20px;
+		display: flex;
+		gap: 20px;
+
+		.hero-left-column,
+		.hero-right-column {
+			display: flex;
+			flex-direction: column;
+
+			.overview-tile {
+				padding: 0 10px 5px 10px;
+				border-radius: 10px;
+
+				&.clickable {
+					cursor: pointer;
+
+					&:hover {
+						background-color: rgb(180, 220, 255);
+					}
+				}
+			}
+		}
+
+		.hero-left-column {
+			flex: 0 0 200px;
+
+			&.border {
+				padding-right: 10px;
+				border-right: 5px solid rgb(0, 0, 0, 0.06);
+			}
+		}
+
+		.hero-main-column {
+			margin-top: -15px;
+			flex: 1 1 0;
+
+			.characteristics-box {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-evenly;
+				gap: 5px;
+				border: 1px solid rgb(200, 200, 200);
+				border-radius: 20px;
+				background-color: rgb(255, 255, 255);
+				padding: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+				&.clickable {
+					cursor: pointer;
+
+					&:hover {
+						background-color: rgb(180, 220, 255);
+
+						.ant-statistic {
+							.ant-statistic-title,
+							.ant-statistic-content {
+								color: rgba(0, 0, 0, 0.88);
+							}
+						}
+					}
+				}
+
+				.characteristic {
+					flex: 1 1 0;
+					border-radius: 10px;
+					padding: 5px 0;
+
+					&.clickable {
+						cursor: pointer;
+
+						&:hover {
+							background-color: rgb(180, 220, 255);
+
+							.ant-statistic {
+								.ant-statistic-title,
+								.ant-statistic-content {
+									color: rgba(0, 0, 0, 0.88);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.conditions-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				.condition-tile {
+					border: 1px solid rgb(200, 200, 200);
+					border-radius: 20px;
+					background-color: rgb(255, 255, 255);
+					padding: 5px 20px 10px 20px;
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+					cursor: pointer;
+
+					&:hover {
+						background-color: rgb(180, 220, 255);
+					}
+				}
+			}
+
+			.features-grid,
+			.abilities-grid {
+				display: grid;
+				gap: 10px;
+
+				&.narrow {
+					grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+				}
+				&.medium {
+					grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				}
+				&.wide {
+					grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+				}
+				&.extra-wide {
+					grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+				}
+			}
+		}
+
+		.hero-right-column {
+			flex: 0 0 200px;
+
+			&.border {
+				padding-left: 10px;
+				border-left: 5px solid rgb(0, 0, 0, 0.06);
+			}
+
+			.damage-modifier {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.hero-panel {
+		.hero-main-section {
+			.hero-left-column {
+				border-right-color: rgba(250, 250, 250, 0.6);
+			}
+
+			.hero-right-column {
+				border-left-color: rgba(250, 250, 250, 0.6);
+			}
+
+			.hero-main-column {
+				.characteristics-box {
+					border-color: rgb(200, 200, 200);
+					background-color: rgb(0, 0, 0);
+
+					&.clickable {
+						&:hover {
+							.ant-statistic {
+								.ant-statistic-title,
+								.ant-statistic-content {
+									color: rgba(0, 0, 0, 0.88);
+								}
+							}
+						}
+					}
+	
+					.characteristic {
+						&.clickable {
+							&:hover {
+								.ant-statistic {
+									.ant-statistic-title,
+									.ant-statistic-content {
+										color: rgba(0, 0, 0, 0.88);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.conditions-grid {
+					.condition-tile {
+						border-color: rgb(200, 200, 200);
+						background-color: rgb(0, 0, 0);
+	
+						&:hover {
+							.header-text-panel {
+								.header-text {
+									color: rgba(0, 0, 0, 0.88);
+								}
+							}
+
+							.ds-text {
+								color: rgba(0, 0, 0, 0.88);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
